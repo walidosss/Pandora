@@ -1,0 +1,1143 @@
+@import url("jquery.bsmselect.css");
+
+body {
+	/* font-family: Verdana, Helvetica, Arial, sans-serif */
+    font-family: Verdana, Helvetica, Arial, sans-serif ;
+	margin: 0;
+	padding: 0;
+	background: white;
+	font-size: 10pt;
+}
+
+/* Fix per explorer */
+input[type=radio] {
+	background: transparent;
+	border: none;
+}
+
+.tableControl {
+	width: 100%;
+}
+
+.tableControl a {
+	padding-left: 10px;
+}
+
+.tableControl {
+	text-align: right;
+}
+
+.footer {
+	text-align: center;
+	font-size: 11px;
+	/* margin-bottom: 10px; */
+	width: 100%;
+	clear: both;
+	position: absolute;
+	bottom: 10px;
+}
+
+.rich-table {
+	width: 100%;
+}
+
+.columnHeader:hover {
+	color: #FF6600;
+}
+
+
+ul#messages, ul#myMessages {
+	border: 1pt dashed #777777;
+	padding: 0.3em;
+	width: 87%;
+	font-size: 1em;
+	background-color: #f2f9ff;
+}
+
+div.auth ul#messages {
+	margin: auto;
+}
+
+.message {
+	padding: 5px;
+	list-style: none;
+	border: 0;
+	background: none;
+	padding: 0;
+	color: #000000;
+	margin: 5px 0 8px 0;
+	font-size: 12px;
+}
+
+.message li {
+	background: no-repeat left center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 38px;
+	margin-left: 3px;
+}
+
+.message li.infomsg {
+	background-image: url(../images/msginfo.png);
+}
+
+.message li.errormsg {
+	color: red;
+	background-image: url(../images/msgerror.png);
+}
+
+.message li.warnmsg {
+	/* color: #FF8800; */
+	background-image: url(../images/msgwarn.png);
+}
+
+
+.name {
+	vertical-align: top;
+	font-weight: bold;
+	width: 250px;
+	float: left;
+	padding: 3px;
+	margin-top: 2px;
+	clear: left;
+}
+
+.name2 {
+	vertical-align: top;
+	font-weight: bold;
+	padding: 3px;
+	margin-top: 2px;
+	clear: left;
+	font-size: 90%;
+}
+
+.value2 {
+	padding: 3px;
+}
+
+.value {
+	float: left;
+	padding: 3px;
+	font-size: 110%;
+}
+
+.value input {
+    border:2px solid #dadada;
+    border-radius:5px;
+	float: left;
+	padding: 3px;
+	font-size: 110%;
+}
+
+.value input:focus { 
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow:0 0 10px #9ecaed;
+}
+
+.value select {
+    border:2px solid #dadada;
+    border-radius:5px;
+	float: left;
+	padding: 3px;
+	font-size: 110%;
+}
+
+.value select:focus { 
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow:0 0 10px #9ecaed;
+}
+
+.error {
+	float: left;
+	padding: 5px;
+}
+
+.errors {
+	color: red;
+	vertical-align: middle;
+}
+
+.eventSucceeded {
+	color: green;
+}
+
+.eventFailed {
+	color: red;
+}
+
+img.errors {
+	padding-right: 5px;
+}
+
+.errors input, .errors textarea {
+	border: 1px solid red !important;
+}
+
+.required {
+	color: red;
+	padding-left: 2px;
+}
+
+.tableControl input[type=submit], .tableControl input[type=button], .tableControl select {
+	margin: 5px 0 5px 5px;
+}
+
+/* I don't know why this is necessary, but the select is off by a pixel on the top and is padding too much on the left */
+.tableControl select {
+	margin-left: 2px;
+	position: relative;
+	top: 1px;
+}
+
+/* Utilizzato principalmente come sotto titolo descrittivo all'interno dei fieldset/richPanel */
+.subTitle {
+	font-size: 9pt;
+	line-height: 1.5em;
+	margin-bottom: 1.0em;
+}
+
+/* Utilizzato principalmente intestazione sopra la tabella in genere per i risultati delle ricerche */
+.tableHeader {
+	font-size: 9pt;
+	padding-top: 1.3em;
+	padding-bottom: 0.3em;
+}
+
+/* Utilizzato sotto ai campi per descriverne meglio il significato e aiutare chi deve inserire dei dati */
+.fieldDescription {
+	padding-top: 5px;
+	padding-bottom: 15px;
+}
+
+td.action {
+	text-align: center;
+	width: 8em;
+	white-space: nowrap;
+}
+
+td.action a {
+	padding-left: 1px;
+	padding-right: 1px;
+}
+
+/* utilizzato per le informazioni preliminari della bulk */
+.bulkTransferInfo {
+	font-size: 10pt;
+	margin-bottom: 1.0em;
+	line-height: 1.5em;
+}
+
+div#BulkTransferSteps {
+	width: 200px;
+	border: 1px solid black;
+	float: left;
+}
+
+div#BulkTransferForm {
+	width: 500px;
+	border: 1px solid black;
+	margin-left: 201px;
+	padding: 0.3em;
+}
+
+.step, .currentStep {
+	display: block;
+	padding: 0.5em;
+	text-align: right;
+}
+
+.currentStep {
+	background-color: black;
+	color: white;
+}
+
+p.application {
+	text-align: justify;
+	font-size: 11pt;
+	line-height: 1.3em;
+	margin-top: 0.8em;
+	padding: 0.4em;
+}
+
+p.aisensi {
+	font-size: 9pt;
+	font-style: italic;
+}
+
+p.application .field {
+	font-weight: bold;
+}
+
+div.actions {
+	margin-left: 50px;
+	margin-top: 25px;
+	clear: both;
+}
+
+
+div.actions input.bt {
+	padding-left: 4px;
+}
+
+/* In actions visualiziamo il link praticamente come pulsanti. */
+div.actions a, div.actions a:visited {
+	display: block;
+	float: left;
+	text-decoration: none;
+	border: 1px solid black;
+	margin: 4pt;
+	margin-left: 0;
+	padding: 2pt 5pt 2pt 5pt;
+	background-color: white;
+	color: black !important;
+}
+
+div.actions a:hover {
+	color: red !important;
+	text-decoration: none !important;
+}
+
+div.actions input {
+	margin: 3px;
+}
+
+div.actions input:hover {
+	cursor: pointer;
+}
+
+/*
+tr.odd {
+	background-color: #fafafa;
+}
+
+tr.even {
+	background-color: #eaeaea;
+}
+*/
+
+.centered {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}
+
+.btStatus_REJECTED, .btStatus_CANCELLED, .outOfFunds, .unaccredited, .dnsCheck_FAILED {
+	color: red;
+}
+
+.btStatus_COMPLETED, .normalBalance, .dnsCheck_SUCCEEDED, .status_active, .accredited  {
+	color: green;
+}
+
+
+.dnsCheck_WARNING, .status_suspended {
+	color: orange;
+}
+
+.lowCredit {
+	/* Orange */
+	color: #ff972f;
+}
+
+
+table.search_result tr td.regcode, table.search_result tr td.state {
+	text-align: center;
+}
+
+table.search_result tr td a {
+	margin-right: 0.8em;
+	display: block;
+}
+
+/* status */
+.status {
+	text-transform: uppercase;
+}
+
+.paymentStatus_approved {
+	color: green;
+}
+
+.domainStatus_ok {
+	color: green;
+}
+
+.domainStatus_deleted {
+	color: red;
+}
+
+.paymentFake {
+	font-weight: bold;
+	font-size: 1.5em;
+	color: red;
+}
+
+/* customizzazioni del main.css di rain */
+div.button input {
+	margin: 0.2em;
+}
+
+
+
+a.disabled, a.disabled:visited, a.disabled:hover {
+	color: grey !important;
+	text-decoration: none !important;	
+}
+
+.centeredImg {
+	vertical-align: middle;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+
+
+
+
+
+/*
+* rightMenu
+*/
+
+div#rightMenu {
+	border-left: 1px dashed grey;
+	padding-left: 20px;
+	position: absolute;
+	top: 100px;
+	right: 25px;
+	width: 260px;
+	height: 580px;
+}
+
+div#rightMenu a, div#rightMenu a:hover, div#rightMenu a:visited {
+	color: black;
+	background-color: transparent;
+	text-decoration: none;
+	font-size: 9pt;
+}
+
+
+
+/*
+* HEAD
+*/
+
+div#head {
+		height: 59px;
+		border-bottom: 1px solid #003265; 
+}
+
+
+
+/* Logo registro */
+div#head div#logo a img {
+  border: 0;
+}
+
+div#head div#logo {
+	position: relative;
+	
+	display: block;
+  	float: left;
+  	overflow: hidden; /*visible;*/
+	
+  	margin-left: 5pt; 
+	top: 2pt;
+	
+  	background: white !important;
+  	width: 18%;
+  	height: 54px;
+}
+
+/* RAIN + tagline */
+#rain {
+  text-align: left;
+  color: #003245;
+  margin: 0;
+  padding: 18px 0 0 0;
+  font-size: 22px;
+  font-weight: bold;
+  overflow: visible;
+}
+
+#rain  a:visited, #rain a:link {
+	text-decoration: none;
+	color: #003245;
+}
+
+#rain a:hover {
+	color: red;
+}
+
+#rain span {
+  /* white-space: nowrap; */
+  font-size: 65%;
+}
+
+/* ricerca rapida in alto a destra */
+div#ricerca {
+ position: absolute;
+ top: 10px;
+ right: 8px;
+ 
+ /*
+ text-align: right;
+ margin-right: 5pt;
+ height: 54px;
+ overflow: visible;
+ white-space: nowrap;
+ */
+}
+
+.quickSearchLabel {
+	font-size: 8pt;
+	text-transform: lowercase;
+	font-weight: bold; 
+}
+
+
+
+
+/*
+* TOPBAR
+*/
+div#topbar {
+ height: 14pt;
+/* margin: 1pt 4pt; */
+
+ /* blu scuro */
+ color: #003265;
+ border-bottom: 1px solid #003265;
+ /* celeste-chiaro-chiaro */
+ /* background-color: #f0f0ff; */
+ padding-top: 2px;
+ text-align: right;
+ font-size: 8pt;
+ font-weight: bold;
+ background: url(../img/background_sfumato.png) repeat-x left top;
+ position: relative;
+}
+
+#fastMenu a {
+	padding: 0pt 26px 0pt 10pt;
+	color: #003265;
+	text-decoration: none;
+	text-transform: lowercase;
+	background-repeat: no-repeat;
+}
+
+#fastMenu a.logout {
+	background-image: url(../img/logout.png);
+	background-position: 90% -1px;
+}
+
+#fastMenu a.home {
+	background-image: url(../img/home.png);
+	background-position: 90% -1px;
+}
+
+#fastMenu a.language {
+	background-position: 80% 2px;
+}
+
+#fastMenu a.english {
+	background-image: url(../img/flag_en.png);
+}
+
+#fastMenu a.italiano {
+	background-image: url(../img/flag_it.png);
+}
+
+#fastMenu a.link {
+	background-image: url(../img/linkSmall.png);
+	background-position: 90% 0px;
+}
+
+#fastMenu a:visited, div#totbar a:link {
+	color: #003265;
+}
+
+
+#fastMenu a:hover {
+	text-decoration: underline;
+}
+
+#version {
+	position: absolute;
+	left: 10px;
+}
+
+#fastMenu {
+	position: absolute;
+	right: 20px;
+}
+
+
+
+
+/*
+* Main
+*/
+div#main {
+	margin-right: 100px;
+	clear: both;
+	padding: 15px 30px 0px 15px;
+	height: auto;
+	width:95%;
+}
+
+
+div#main h1 {
+  color: #003265;
+  padding: 0;
+  margin: 9pt 0 9pt 0;
+  font-size: 13pt;
+  border-bottom: 1pt solid #e2e9f1;
+}
+
+img {
+	border: none;
+}
+
+
+div#main a, div#main a:visited {
+	text-decoration: none;
+	color: blue;
+}
+
+div#main a:hover {
+	text-decoration: none;
+}
+
+div#main a:hover {
+	text-decoration: underline;
+}
+
+.breadCrumb {
+  display: block;
+  color: #003265;
+  padding: 0;
+  margin: 1.5em 0 9pt 0;
+  font-size: 11pt;
+  font-weight: bold;
+  border-bottom: 1pt solid #e2e9f1;
+}
+
+
+
+
+
+/*
+* LOGIN Panel
+*/
+#login {
+	margin-left: 20%;
+	margin-right: 20%;
+	text-align: center;
+}
+
+#login .nicPanel {
+	width: 50%;
+}
+
+#login h1 {
+	text-align: center;
+	font-size: 16pt;
+}
+
+#login .loginField {
+	margin-bottom: 0.5em;
+}	
+
+#login div {
+	text-align: left;
+}
+
+#login #messages {
+	width: 55%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#login .loginField label {
+  display: block;
+  float: left;
+  clear: both;
+ 
+  font-size: 1.1em;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 1em;
+}
+
+#login .button {
+	text-align: center;
+	margin-top: 10pt;
+}
+
+div.langSelector {
+	text-align: center;
+}
+
+div.langSelector table {
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.langSelector table label {
+	padding-left: 17px;
+	display: inline;
+	float: none;
+}
+
+div.langSelector table td:first-child label {
+	background: url(../img/flag_it.png) no-repeat left center;
+	margin-left: 5px;
+}
+
+div.langSelector table td:last-child {
+		text-align: right;
+}
+
+div.langSelector table td label {
+	background: url(../img/flag_en.png) no-repeat left center;
+	margin-left: 5px;
+}
+
+
+
+
+
+/*
+*  BUTTONS/INPUT
+*/
+input, select, textarea {
+  border: 1px solid black;
+  background-color: white;
+  padding-left: 1px;
+}
+
+div.button input, input.bt, input.btsearchIt, input.btsearch, input.btok, input.btreset, input.btadd, input.btdelete, input.btlist, input.btpdf, input.btback, input.btrefresh {
+  background-repeat: no-repeat;
+  background-position: 3px center;
+  cursor: pointer;
+/*  background-image: url(/images/xxx.png); */
+  padding: 4px 3px 4px 22px;
+}
+
+div.button input.search, input.btsearchIt {
+  background-image: url(../img/searchitSmall.png);
+}
+
+input.btsearch {
+  background-image: url(../img/searchSmall.png);
+}
+
+div.button input.ok, input.btok {
+  background-image: url(../img/accetta.png);
+}
+
+input.btadd {
+  background-image: url(../img/add.png);
+}
+
+input.btpdf {
+  background-image: url(../img/pdf_small.png);
+}
+
+input.btdelete {
+  background-image: url(../img/delete.png);
+}
+
+input.btlist {
+  background-image: url(../img/list.png);
+}
+
+div.button input.reset, input.btreset {
+  background-image: url(../img/annulla.png);
+}
+
+input.btback {
+  background-image: url(../img/back.png);
+}
+
+input.btrefresh {
+  background-image: url(../img/aggiorna.png);
+}
+
+
+
+
+/*
+* Vari
+*/
+
+
+.top {
+	vertical-align: top;
+}
+
+
+.stronger {
+	font-weight: bold;
+}
+
+
+/* utile per evidenziare i record selezionati di una tabella. Attualmente in uso per Rcontact List*/
+.selected {
+	color: red;
+}
+
+/* la tabella ti faceva diventare cieco! :-) */
+table.nicRichDataTable td {
+	font-size: 9pt;
+}
+
+/* Font un pochino ingrandito per il phoneService*/
+.phoneService {
+	font-size: 10pt;	
+}
+
+/* fieldset per elenco nameserver nella verifica del dns*/
+fieldset.nsList {
+	margin-left: 5px; margin-top: 15px; border: 2px groove; padding: 5px;
+}
+
+pre.nsResult {
+	font-size: 9pt;
+}
+
+
+/*
+ * Per il jquery.bsmselect.js
+ */
+.value .bsmContainer {
+  clear: none;
+  padding: 0;
+}
+
+.statusesSelect .bsmContainer {
+  width: 20em;
+}
+
+.statusesSelect .bsmSelect {
+  width: 20em;
+}
+
+
+/*
+ *Alerts e RegistrarEvents in home page
+ */
+ .alertInner {
+	font-size: 9pt;
+	overflow: auto;
+	height: 220px;
+}
+ 
+.alerts {
+		display: block;
+		background-image: url(../img/alert.png);
+		background-repeat: no-repeat;
+		background-position: left center;
+		padding: 0.5em 0.2em 0.5em 2em;
+}
+
+
+
+.alertInfo {
+		position: absolute;
+		height: 20px;
+		margin: 0;
+		padding: 0;
+		font-size: 8pt;
+		text-align: right;
+		bottom: 5px;
+		right: 5px;
+}
+
+.registrarEvents {
+	padding-left: 1em;
+}
+
+
+
+/*
+* BreadCrumb icons
+*/
+.creditCardIcon {
+	background-image: url(../img/creditCardMoneyAdd.png);
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	padding: 0.5em 0 0.5em 0;
+}
+
+.phoneIcon {
+	background-image: url(../img/phone.png);
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	padding: 0.5em 0 0.5em 0;
+}
+
+.emailIcon {
+	background-image: url(../img/email.png);
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	padding: 0.5em 0 0.5em 0;
+}
+
+.invoiceIcon {
+	background-image: url(../img/invoice.png);
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	padding: 0.5em 0 0.5em 0;
+}
+
+.contactsIcon {
+	background-image: url(../img/contacts.png);
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	padding: 0.5em 0 0.5em 0;
+}
+
+.ipIcon {
+	background-image: url(../img/server.png);
+	/* background-image: url(../img/ipAddress.png); */
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	padding: 0.5em 0 0.5em 0;
+}
+
+.eppIpIcon {
+	background-image: url(../img/eppIp.png);
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	padding: 0.7em 0 0.5em 0;
+}
+
+.dasIpIcon {
+	background-image: url(../img/dasIp.png);
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	padding: 0.7em 0 0.5em 0;
+}
+
+.bulkTransferIcon {
+	background-image: url(../img/bulkTransfer.png);
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	padding: 1em 0 0.5em 0;
+}
+
+.passwordIcon {
+	background-image: url(../img/passwordEdit.png);
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	padding: 0.5em 0 0.5em 0;
+}
+
+.webIcon {
+	background-image: url(../img/web.png);
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	padding: 0.5em 0 0.5em 0;
+}
+
+
+.idnConverterIcon {
+	background-image: url(../img/idnConverter.png);
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	padding: 0.5em 0 0.5em 0;
+}
+
+.moneyIcon {
+	background-image: url(../img/money.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+	padding: 0.5em 0 0.5em 0;
+}
+
+.moneyAddIcon {
+	background-image: url(../img/moneyAdd.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+	padding: 0.5em 0 0.5em 0;
+}
+
+.searchIcon {
+	background-image: url(../img/search.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+	padding: 0.5em 0 0.5em 0;
+}
+
+.searchitIcon {
+	background-image: url(../img/searchit.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+	padding: 0.5em 0 0.5em 0;
+}
+
+
+.checkIcon {
+	background-image: url(../img/check.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+	padding: 0.5em 0 0.5em 0;
+}
+
+.contractIcon {
+	background-image: url(../img/contract.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+	padding: 0.5em 0 0.5em 0;
+}
+
+.buildingEditIcon {
+	background-image: url(../img/buildingEdit.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+	padding: 0.5em 0 0.5em 0;
+}
+
+.viewIcon {
+	background-image: url(../img/view.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+	padding: 0.5em 0 0.5em 0;
+}
+
+
+.paymentIcon {
+	background-image: url(../img/moneyAdd.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+	padding: 0.5em 0 0.5em 0;
+}
+
+.paymentsListIcon {
+	background-image: url(../img/paymentsList.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+	padding: 0.5em 0 0.5em 0;
+}
+
+.searchContactIcon {
+	background-image: url(../img/searchContact.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+	padding: 0.5em 0 0.5em 0;
+}
+
+.registrarEventsIcon {
+	background-image: url(../img/calendar.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+	padding: 0.5em 0 0.5em 0;
+}
+
+.adminIcon {
+	background-image: url(../img/admin.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+	padding: 0.5em 0 0.5em 0;
+}
+
+
+
+/*
+*  Visualizzazione Whois
+*/
+
+.whois {
+}
+
+.whois .section {
+	padding-left: 10px;
+}
+
+
+.whoisLabel {
+	vertical-align: top;
+	font-weight: bold;
+	width: 150px;
+	float: left;
+	clear: left;
+}
+
+.whois .section .whoisLabel {
+	width: 140px;
+}
+
+.sectionLabel {
+	font-weight: bold;
+	margin-top: 1.5em;
+	display: block;
+}
+
+.whoisValue {
+	font-size: 110%;
+	padding: 2px 0 2px 1em;
+	display: block;
+	float: left;
+}
+
+.whoisLineValue {
+	font-size: 110%;
+	padding: 3px 0 2px 1em;
+	display: block;
+}
+
+
+/*
+* Registrar Events icons
+*/
+
+.registrarEventIcon {
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding: 0 20px 3px 2px;
+	
+}
+
+.registrarEvent_paymentSubmitted {
+	background-image: url(../img/moneyAddSmall.png);
+}
+
+.registrarEvent_paymentApproved {
+	background-image: url(../img/moneyApprovedSmall.png);
+}
+
+.registrarEvent_paymentRejected {
+	background-image: url(../img/moneyRejectedSmall.png);
+}
+
+.registrarEvent_registrarPasswordChange {
+	background-image: url(../img/passwordEditSmall.png);
+}
+
+.registrarEvent_newInvoice {
+	background-image: url(../img/invoiceSmall.png);
+}
+
+.registrarEvent_registrarStatusChangeToActive,
+.registrarEvent_creditStatusChangeToNormal {
+	background-image: url(../img/okSmall.png);
+}
+
+.registrarEvent_registrarRename {
+	background-image: url(../img/rename.png);
+}
+
+
+.registrarEvent_registrarStatusChangeToSuspended,
+.registrarEvent_registrarStatusChangeToDeleted,
+.registrarEvent_creditStatusChangeToLow,
+.registrarEvent_creditStatusChangeToOutOfFunds {
+	background-image: url(../img/alert.png);
+}
