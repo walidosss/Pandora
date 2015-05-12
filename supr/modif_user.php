@@ -15,29 +15,29 @@ $naissance = $dt[2].'-'.$dt[1].'-'.$dt[0];
 $password = trim($_POST['password']);
 
 $usertype = trim($_POST['id_type_user']);
+$id_user = $_POST['id'];
 
-if ( empty($nom) || empty($prenom) || empty($email) || empty($naissance) || empty($password) ) {
+if ( empty($id_user) || empty($nom) || empty($prenom) || empty($email) || empty($naissance) || empty($password) ) {
 	$_SESSION["S_ERR_REG"] = "Compiler tous les champs.<br><br>";
-	header("Location: edit_user.php");
+	header("Location: modification_u.php?id=$id_user");
 } else {
 	$connect = connectDB();
-	if(isset($_POST['id'])){
+	if(isset($id_user) && !empty($id_user)){
 		if (Verify_User_Exist($nom, $prenom, $email)) {
 			disconnectDB($connect);
 			$_SESSION["S_ERR_REG"] = "Utilisateur dejà existant!";
-			header("Location: modification_u.php");
 		} else {
 			$query  = "update `guichetdb`.`user` set name='".$nom."' , naissance='".$naissance."' ,";
 			$query .= "surname='".$prenom."' , email = '".$email."' , password = '".$password."' ";
-			$query .= " id_type_user=$usertype where id = ".$_POST['id'];
+			$query .= " id_type_user=$usertype where id = id_user";
 			//echo $query;exit;
 			if (mysqli_query($connect, $query)) {
 				$_SESSION['S_REG_INFO'] = 'Modification réussie';
 			} else {
 				$_SESSION["S_ERR_REG"] = "Erreur lors de modification";
 			}
-			header("Location: modification_u.php");
 		}
+		header("Location: modification_u.php?id=$id_user");
 	} else {
 		$_SESSION["S_ERR_REG"] = "Utilisateur inexistant";
 		header("Location: modification_u.php");

@@ -64,7 +64,22 @@ disconnectDB($connect);
                                 <div class="content">
                                    
                                     <form class="form-horizontal" id="form-validate" action="modif_user.php" />
-
+				<?php 
+				if(isset($_SESSION["S_ERR_REG"]) && !empty($_SESSION["S_ERR_REG"])) { 
+					echo "<div class='alert alert-error'>";
+					echo "<button class='close' data-dismiss='alert'>×</button>";
+					echo "<strong>Attention! </strong> ".$_SESSION["S_ERR_REG"];
+                    echo "</div>";
+					unset($_SESSION["S_ERR_REG"]);
+				} 
+				if(isset($_SESSION['S_REG_INFO']) && !empty($_SESSION['S_REG_INFO'])) { 
+					echo "<div class='alert alert-info'>";
+					echo "<button type='button' class='close' data-dismiss='alert'>&times;</button>";
+					echo "<strong>Ok: </strong> ".$_SESSION['S_REG_INFO'];
+					echo "</div>";
+					unset($_SESSION['S_REG_INFO']);
+				}
+				?>
 					<div class="form-row row-fluid">
 						<div class="span12">
 							<div class="row-fluid">
@@ -77,7 +92,7 @@ disconnectDB($connect);
 						<div class="span12">
 							<div class="row-fluid">
 								<label class="form-label span3" for="required">Nom</label>
-								<input class="span9" id="name" name="name" type="text" value="<?php echo $line['name'];?>"/>
+								<input class="span9" id="nom" name="nom" type="text" value="<?php echo $line['name'];?>"/>
 							</div>
 						</div>
 					</div>
@@ -85,7 +100,7 @@ disconnectDB($connect);
 						<div class="span12">
 							<div class="row-fluid">
 								<label class="form-label span3" for="required">Prénom</label>
-								<input class="span9" id="surname" name="surname" type="text" value="<?php echo $line['surname'];?>"/>
+								<input class="span9" id="prenom" name="prenom" type="text" value="<?php echo $line['surname'];?>"/>
 							</div>
 						</div>
 					</div>
@@ -184,9 +199,6 @@ disconnectDB($connect);
                                             
                                                 <div class="span12">
 												<div class="alert">
-                                <button class="close" data-dismiss="alert">×</button>
-                                <strong>Warning!</strong> Best check yo self, you're not looking too good.
-                            </div>
                                                     <div class="row-fluid">
                                                         <div class="form-actions">
                                                         <div class="span3"></div>
