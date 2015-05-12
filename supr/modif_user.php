@@ -20,26 +20,26 @@ if ( empty($nom) || empty($prenom) || empty($email) || empty($naissance) || empt
 	header("Location: edit_user.php");
 } else {
 	$connect = connectDB();
-	if(isset($_POST['idUser'])){
+	if(isset($_POST['id'])){
 		if (Verify_User_Exist($nom, $prenom, $email)) {
 			disconnectDB($connect);
 			$_SESSION["S_ERR_REG"] = "Utilisateur dejà existant!";
-			header("Location: edit_user.php");
+			header("Location: modification_u.php");
 		} else {
 			$query  = "update `guichetdb`.`user` set name='".$nom."' , naissance='".$naissance."' ,";
 			$query .= "surname='".$prenom."' , email = '".$email."' , password = '".$password."' ";
-			$query .= " id_type_user=$usertype where id = ".$_POST['idUser'];
+			$query .= " id_type_user=$usertype where id = ".$_POST['id'];
 			//echo $query;exit;
 			if (mysqli_query($connect, $query)) {
 				$_SESSION['S_REG_INFO'] = 'Modification réussie';
 			} else {
 				$_SESSION["S_ERR_REG"] = "Erreur lors de modification";
 			}
-			header("Location: edit_user.php");
+			header("Location: modification_u.php");
 		}
 	} else {
 		$_SESSION["S_ERR_REG"] = "Utilisateur inexistant";
-		header("Location: edit_user.php");
+		header("Location: modification_u.php");
 	}
 }
 ?>
