@@ -183,6 +183,10 @@ disconnectDB($connect);
                                         <div class="form-row row-fluid">
                                             
                                                 <div class="span12">
+												<div class="alert">
+                                <button class="close" data-dismiss="alert">×</button>
+                                <strong>Warning!</strong> Best check yo self, you're not looking too good.
+                            </div>
                                                     <div class="row-fluid">
                                                         <div class="form-actions">
                                                         <div class="span3"></div>
