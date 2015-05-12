@@ -1,4 +1,5 @@
 <?php
+
 $id_user=$_GET['id'];
 $query  = "SELECT * FROM `user` where id=$id_user";
 $connect = connectDB();
