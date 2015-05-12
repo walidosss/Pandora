@@ -69,7 +69,9 @@
                                         <tbody>
 <?php 
 $i=0;
-
+$query  = "SELECT * FROM `user`";
+$connect = connectDB();
+$res = mysqli_query($connect, $query);
 while ($line = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
 	echo "<tr class='gradeA'>";
 	echo "<td>".$line['id']."</td>";
