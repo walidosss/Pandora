@@ -16,22 +16,16 @@ if (isset($_SESSION["S_LOGIN"]) && !empty($_SESSION["S_LOGIN"])) {
     if (Verify_Sess_Login($array_s_login, 1) && empty($errore)) {
 		
 
-
-$id_user=$_GET['id'];
-$query  = "SELECT * FROM `user` where id=$id_user";
+$query  = "SELECT * FROM `user`";
 $connect = connectDB();
 $res = mysqli_query($connect, $query);
-$line = mysqli_fetch_array($res, MYSQLI_ASSOC);
-//while ($line = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
-disconnectDB($connect);
-
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
     
-    <title>CanalBleu admin</title>
+    <title>Supr admin</title>
     <meta name="author" content="SuggeElson" />
     <meta name="description" content="Supr admin template - new premium responsive admin template. This template is designed to help you build the site administration without losing valuable time.Template contains all the important functions which must have one backend system.Build on great twitter boostrap framework" />
     <meta name="keywords" content="admin, admin template, admin theme, responsive, responsive admin, responsive admin template, responsive theme, themeforest, 960 grid system, grid, grid theme, liquid, masonry, jquery, administration, administration template, administration theme, mobile, touch , responsive layout, boostrap, twitter boostrap" />
@@ -106,7 +100,7 @@ disconnectDB($connect);
     <!-- loading animation -->
     <div id="qLoverlay"></div>
     <div id="qLbar"></div>
-    
+
     <div id="header">
 
         <div class="navbar">
@@ -426,7 +420,7 @@ disconnectDB($connect);
 
                 <div class="heading">
 
-                    <h3>Form validation</h3>                    
+                    <h3>Data tables</h3>                    
 
                     <div class="resBtnSearch">
                         <a href="#"><span class="icon16 brocco-icon-search"></span></a>
@@ -451,7 +445,7 @@ disconnectDB($connect);
                                 <span class="icon16 icomoon-icon-arrow-right"></span>
                             </span>
                         </li>
-                        <li class="active">Form validation</li>
+                        <li class="active">Data tables</li>
                     </ul>
 
                 </div><!-- End .heading-->
@@ -462,159 +456,80 @@ disconnectDB($connect);
 
                         <div class="span12">
 
-                            <div class="box">
+                            <div class="box gradient">
 
                                 <div class="title">
-
                                     <h4>
-                                        <span class="icon16 brocco-icon-grid"></span>
-                                        <span>Données Utilisateur</span>
+                                        <span>Liste Utilisateurs</span>
                                     </h4>
-                                    
                                 </div>
-                                <div class="content">
-                                   
-                                    <form class="form-horizontal" id="form-validate" action="modif_user.php" />
+                                <div class="content noPad clearfix">
+                                    <table cellpadding="0" cellspacing="0" border="0" class="responsive dynamicTable display table table-bordered" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th>id</th>
+                                                <th>nom</th>
+                                                <th>prénom</th>
+                                                <th>login</th>
+                                                <th>date naissance</th>
+												<th>mot de passe</th>
+												<th>email</th>
+												<th>type</th>
+												<th>date enregistrement</th>
+												<th>date suppression</th>
+												<th>numéro compte</th>
+												<th>Modifier</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+<?php 
+$i=0;
 
-					<div class="form-row row-fluid">
-						<div class="span12">
-							<div class="row-fluid">
-								<label class="form-label span3" for="required">ID</label>
-								<input class="span9" id="id" name="id" type="text" value="<?php echo $line['id'];?>" readonly/>
-							</div>
-						</div>
-					</div>
-					<div class="form-row row-fluid">
-						<div class="span12">
-							<div class="row-fluid">
-								<label class="form-label span3" for="required">Nom</label>
-								<input class="span9" id="name" name="name" type="text" value="<?php echo $line['name'];?>"/>
-							</div>
-						</div>
-					</div>
-					<div class="form-row row-fluid">
-						<div class="span12">
-							<div class="row-fluid">
-								<label class="form-label span3" for="required">Prénom</label>
-								<input class="span9" id="surname" name="surname" type="text" value="<?php echo $line['surname'];?>"/>
-							</div>
-						</div>
-					</div>
-					<div class="form-row row-fluid">
-						<div class="span12">
-							<div class="row-fluid">
-								<label class="form-label span3" for="required">Login</label>
-								<input class="span9" id="username" name="username" type="text" value="<?php echo $line['username'];?>"/>
-							</div>
-						</div>
-					</div>
-					<div class="form-row row-fluid">
-						<div class="span12">
-							<div class="row-fluid">
-								<label class="form-label span3" for="normal">Date de naissance</label>
-								<?php 
-								$tmp = explode('-', $line['naissance']);
-								$date_naissance = $tmp['2'].'/'.$tmp['1'].'/'.$tmp['0'];?>
-								<input class="span9 mask" id="naissance" name="naissance" type="text" value="<?php echo $date_naissance; ?>"/>
-								<span class="help-block blue span9">99/99/9999</span>
-							</div>
-						</div> 
-					</div>
-					<div class="form-row row-fluid">
-						<div class="span12">
-							<div class="row-fluid">
-								<label class="form-label span3" for="email">Email</label>
-								<input class="span9" id="email" name="email" type="text" value="<?php echo $line['email'];?>"/>
-							</div>
-						</div>
-					</div>
-					<div class="form-row row-fluid">
-						<div class="span12">
-							<div class="row-fluid">
-								<label class="form-label span3" for="normal">Mot de passe</label>
-								<div class="span9 controls">
-									<input class="span9" id="password" name="password" type="password" placeholder="Enter your password" value="<?php echo $line['password'];?>"/>
-									<input class="span9" id="passwordConfirm" name="confirm_password" type="password" placeholder="Enter your password again" value="<?php echo $line['password'];?>"/>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="form-row row-fluid">
-						<div class="span12">
-							<div class="row-fluid">
-								<label class="form-label span3" for="normal">Type utilisateur</label>
-								<div class="span9 controls">
-									<input class="span9" id="id_type_user" name="id_type_user" type="text" value="<?php echo $line['id_type_user'];?>"/>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="form-row row-fluid">
-						<div class="span12">
-							<div class="row-fluid">
-								<label class="form-label span3" for="normal">Date insertion</label>
-								<?php 
-								$tmp2 = explode(' ', $line['date_ins']);
-								$tmp = explode('-', $tmp2[0]);
-								//2015-05-10 18:16:26.000000
-								$date_insertion = $tmp['2'].'/'.$tmp['1'].'/'.$tmp['0'];?>
-								<input class="span9 mask" id="date_ins" name="date_ins" type="text" value="<?php echo $date_insertion; ?>"/>
-								<span class="help-block blue span9">99/99/9999</span>
-							</div>
-						</div>
-					</div>
-					<div class="form-row row-fluid">
-						<div class="span12">
-							<div class="row-fluid">
-								<label class="form-label span3" for="normal">Date suppression</label>
-								<?php 
-								$tmp2 = explode(' ', $line['date_del']);
-								$tmp = explode('-', $tmp2[0]);
-								//2015-05-10 18:16:26.000000
-								$date_suppression = $tmp['2'].'/'.$tmp['1'].'/'.$tmp['0'];?>
-								<input class="span9 mask" id="date_del" name="date_del" type="text" value="<?php echo $date_suppression; ?>"/>
-								<span class="help-block blue span9">99/99/9999</span>
-								
-							</div>
-						</div>
-					</div>
+while ($line = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
+	echo "<tr class='gradeA'>";
+	echo "<td>".$line['id']."</td>";
+	echo "<td>".$line['name']."</td>";
+	echo "<td>".$line['surname']."</td>";
+	echo "<td>".$line['username']."</td>";
+	echo "<td>".$line['naissance']."</td>";
+	echo "<td>".$line['password']."</td>";
+	echo "<td>".$line['email']."</td>";
+	echo "<td>".$line['id_type_user']."</td>";
+	echo "<td>".$line['date_ins']."</td>";
+	echo "<td>".$line['date_del']."</td>";
+	echo "<td>".$line['num_compte']."</td>";
+	echo "<td><a href='edit_user.php?id=".$line['id']."'><span class='brocco-icon-pencil' aria-hidden='true'></span></a></td>";
+	echo "</tr>";
+	$i++;
+}
+disconnectDB($connect);
+?>
 
-					<div class="form-row row-fluid">
-						<div class="span12">
-							<div class="row-fluid">
-								<label class="form-label span3" for="normal">Numéro compte poste</label>
-								<div class="span9 controls">
-									<input class="span9" id="num_compte" name="num_compte" type="text" value="<?php echo $line['num_compte'];?>"/>
-								</div>
-							</div>
-						</div>
-					</div>
-
-
-                                        <div class="form-row row-fluid">
-                                            
-                                                <div class="span12">
-                                                    <div class="row-fluid">
-                                                        <div class="form-actions">
-                                                        <div class="span3"></div>
-                                                        <div class="span9 controls">
-                                                            <button type="submit" class="btn marginR10">Modifier</button>
-                                                            <button class="btn btn-danger">Annuler</button>
-                                                        </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            
-                                        </div>
-                                    </form>
-                                 
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>id</th>
+                                                <th>nom</th>
+                                                <th>prénom</th>
+                                                <th>login</th>
+                                                <th>date naissance</th>
+												<th>mot de passe</th>
+												<th>email</th>
+												<th>type</th>
+												<th>date enregistrement</th>
+												<th>date suppression</th>
+												<th>numéro compte</th>
+												<th>Modifier</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
                                 </div>
 
                             </div><!-- End .box -->
 
                         </div><!-- End .span12 -->
 
-                    </div><!-- End .row-fluid -->  
+                    </div><!-- End .row-fluid -->
                
     			<!-- Page end here -->
     				
@@ -727,6 +642,8 @@ disconnectDB($connect);
     <script type="text/javascript" src="plugins/plupload/plupload.html4.js"></script>
     <script type="text/javascript" src="plugins/plupload/jquery.plupload.queue/jquery.plupload.queue.js"></script>
 
+    <script type="text/javascript" src="plugins/responsive-tables/responsive-tables.js"></script>
+
 
     <!-- Init plugins -->
     <script type="text/javascript" src="js/statistic.js"></script><!-- Control graphs ( chart, pies and etc) -->
@@ -738,6 +655,7 @@ disconnectDB($connect);
 
     </body>
 </html>
+
 <?php
 	} else {
 		header("Location: index.php");
