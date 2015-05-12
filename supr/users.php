@@ -85,7 +85,7 @@ while ($line = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
 	echo "<td>".$line['date_ins']."</td>";
 	echo "<td>".$line['date_del']."</td>";
 	echo "<td>".$line['num_compte']."</td>";
-	echo "<td><a href='edit_user.php?id=".$line['id']."'><span class='brocco-icon-pencil' aria-hidden='true'></span></a></td>";
+	echo "<td><a href='modification_u.php?id=".$line['id']."'><span class='brocco-icon-pencil' aria-hidden='true'></span></a></td>";
 	echo "</tr>";
 	$i++;
 }
