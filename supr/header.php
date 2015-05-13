@@ -10,10 +10,10 @@
                 <a class="brand" href="dashboard.php">CanalBleu.<span class="slogan">admin</span></a>
                 <div class="nav-no-collapse">
                     <ul class="nav">
-                        <li class="active"><a href="dashboard.html"><span class="icon16 icomoon-icon-screen"></span> Dashboard</a></li>
-                        <li class="dropdown">
+                        <li class="active"><a href="dashboard.php"><span class="icon16 icomoon-icon-screen"></span> Tableau de bord</a></li>
+                        <!--li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <span class="icon16 icomoon-icon-cog"></span> Settings
+                                <span class="icon16 icomoon-icon-cog"></span> Paramètres
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu">
@@ -93,7 +93,7 @@
                                     </ul>
                                 </li>
                             </ul>
-                        </li>
+                        </li-->
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle avatar" data-toggle="dropdown">
                                 <img src="images/avatar.jpg" alt="" class="image" /> 
@@ -104,19 +104,19 @@
                                 <li class="menu">
                                     <ul>
                                         <li>
-                                            <a href="#"><span class="icon16 icomoon-icon-user-3"></span>Edit profile</a>
+                                            <a href="profil_.php"><span class="icon16 icomoon-icon-user-3"></span>Mon profil</a>
                                         </li>
-                                        <li>
+                                        <!--li>
                                             <a href="#"><span class="icon16 icomoon-icon-comments-2"></span>Approve comments</a>
-                                        </li>
+                                        </li-->
                                         <li>
-                                            <a href="#"><span class="icon16 entypo-icon-contact"></span>Add user</a>
+                                            <a href="#"><span class="icon16 entypo-icon-contact"></span>Ajouter admin</a>
                                         </li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="../logout.php"><span class="icon16 icomoon-icon-exit"></span> Déconnexion</a></li>
+                        <li><a href="logout.php"><span class="icon16 icomoon-icon-exit"></span> Déconnexion</a></li>
                     </ul>
                 </div><!-- /.nav-collapse -->
               </div>

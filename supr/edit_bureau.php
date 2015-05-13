@@ -1,7 +1,7 @@
 <?php
 
-$id_user=$_GET['id'];
-$query  = "SELECT * FROM `user` where id=$id_user";
+$id_bureau=$_GET['ID'];
+$query  = "SELECT * FROM `bureau` where ID=$id_bureau";
 $connect = connectDB();
 $res = mysqli_query($connect, $query);
 $line = mysqli_fetch_array($res, MYSQLI_ASSOC);
@@ -56,13 +56,13 @@ disconnectDB($connect);
 
                                     <h4>
                                         <span class="icon16 brocco-icon-grid"></span>
-                                        <span>Données Utilisateur</span>
+                                        <span>Données Bureau</span>
                                     </h4>
                                     
                                 </div>
                                 <div class="content">
-                                   
-                                    <form class="form-horizontal" id="form-validate" method="post" action="modif_user.php" />
+
+                                    <form class="form-horizontal" id="form-validate" method="post" action="modif_bureau.php" />
 				<?php 
 				if(isset($_SESSION["S_ERR_REG"]) && !empty($_SESSION["S_ERR_REG"])) { 
 					echo "<div class='alert alert-error'>";
@@ -79,11 +79,12 @@ disconnectDB($connect);
 					unset($_SESSION['S_REG_INFO']);
 				}
 				?>
+
 					<div class="form-row row-fluid">
 						<div class="span12">
 							<div class="row-fluid">
 								<label class="form-label span3" for="required">ID</label>
-								<input class="span9" id="id_user" name="id_user" type="text" value="<?php echo $line['id'];?>" readonly/>
+								<input class="span9" id="id_bureau" name="id_bureau" type="text" value="<?php echo $line['ID'];?>" readonly/>
 							</div>
 						</div>
 					</div>
@@ -91,104 +92,71 @@ disconnectDB($connect);
 						<div class="span12">
 							<div class="row-fluid">
 								<label class="form-label span3" for="required">Nom</label>
-								<input class="span9" id="nom" name="nom" type="text" value="<?php echo $line['name'];?>"/>
+								<input class="span9" id="nom_bureau" name="nom_bureau" type="text" value="<?php echo $line['Nom'];?>"/>
 							</div>
 						</div>
 					</div>
 					<div class="form-row row-fluid">
 						<div class="span12">
 							<div class="row-fluid">
-								<label class="form-label span3" for="required">Prénom</label>
-								<input class="span9" id="prenom" name="prenom" type="text" value="<?php echo $line['surname'];?>"/>
+								<label class="form-label span3" for="required">Rue</label>
+								<input class="span9" id="rue" name="rue" type="text" value="<?php echo $line['Rue'];?>"/>
 							</div>
 						</div>
 					</div>
 					<div class="form-row row-fluid">
 						<div class="span12">
 							<div class="row-fluid">
-								<label class="form-label span3" for="required">Login</label>
-								<input class="span9" id="username" name="username" type="text" value="<?php echo $line['username'];?>"/>
+								<label class="form-label span3" for="required">Cité</label>
+								<input class="span9" id="cite" name="cite" type="text" value="<?php echo $line['Cite'];?>"/>
 							</div>
 						</div>
 					</div>
 					<div class="form-row row-fluid">
 						<div class="span12">
 							<div class="row-fluid">
-								<label class="form-label span3" for="normal">Date de naissance</label>
-								<?php 
-								$tmp = explode('-', $line['naissance']);
-								$date_naissance = $tmp['2'].'/'.$tmp['1'].'/'.$tmp['0'];?>
-								<input class="span9 mask" id="naissance" name="naissance" type="text" value="<?php echo $date_naissance; ?>"/>
-								<span class="help-block blue span9">99/99/9999</span>
-							</div>
-						</div> 
-					</div>
-					<div class="form-row row-fluid">
-						<div class="span12">
-							<div class="row-fluid">
-								<label class="form-label span3" for="email">Email</label>
-								<input class="span9" id="email" name="email" type="text" value="<?php echo $line['email'];?>"/>
+								<label class="form-label span3" for="required">Province</label>
+								<input class="span9" id="province" name="province" type="text" value="<?php echo $line['Province'];?>"/>
 							</div>
 						</div>
 					</div>
 					<div class="form-row row-fluid">
 						<div class="span12">
 							<div class="row-fluid">
-								<label class="form-label span3" for="normal">Mot de passe</label>
-								<div class="span9 controls">
-									<input class="span9" id="password" name="password" type="password" placeholder="Enter your password" value="<?php echo $line['password'];?>"/>
-									<input class="span9" id="passwordConfirm" name="confirm_password" type="password" placeholder="Enter your password again" value="<?php echo $line['password'];?>"/>
-								</div>
+								<label class="form-label span3" for="required">Longitude</label>
+								<input class="span9" id="longitude" name="longitude" type="text" value="<?php echo $line['Longitude'];?>"/>
 							</div>
 						</div>
 					</div>
 					<div class="form-row row-fluid">
 						<div class="span12">
 							<div class="row-fluid">
-								<label class="form-label span3" for="normal">Type utilisateur</label>
-								<div class="span9 controls">
-									<input class="span9" id="id_type_user" name="id_type_user" type="text" value="<?php echo $line['id_type_user'];?>"/>
-								</div>
+								<label class="form-label span3" for="required">Lattitude</label>
+								<input class="span9" id="lattitude" name="lattitude" type="text" value="<?php echo $line['Lattitude'];?>"/>
 							</div>
 						</div>
 					</div>
 					<div class="form-row row-fluid">
 						<div class="span12">
 							<div class="row-fluid">
-								<label class="form-label span3" for="normal">Date insertion</label>
-								<?php 
-								$tmp2 = explode(' ', $line['date_ins']);
-								$tmp = explode('-', $tmp2[0]);
-								//2015-05-10 18:16:26.000000
-								$date_insertion = $tmp['2'].'/'.$tmp['1'].'/'.$tmp['0'];?>
-								<input class="span9 mask" id="date_ins" name="date_ins" type="text" value="<?php echo $date_insertion; ?>"/>
-								<span class="help-block blue span9">99/99/9999</span>
+								<label class="form-label span3" for="required">Altitude</label>
+								<input class="span9" id="altitude" name="altitude" type="text" value="<?php echo $line['Altitude'];?>"/>
 							</div>
 						</div>
 					</div>
 					<div class="form-row row-fluid">
 						<div class="span12">
 							<div class="row-fluid">
-								<label class="form-label span3" for="normal">Date suppression</label>
-								<?php 
-								$tmp2 = explode(' ', $line['date_del']);
-								$tmp = explode('-', $tmp2[0]);
-								//2015-05-10 18:16:26.000000
-								$date_suppression = $tmp['2'].'/'.$tmp['1'].'/'.$tmp['0'];?>
-								<input class="span9 mask" id="date_del" name="date_del" type="text" value="<?php echo $date_suppression; ?>"/>
-								<span class="help-block blue span9">99/99/9999</span>
-								
+								<label class="form-label span3" for="required">Reference</label>
+								<input class="span9" id="reference" name="reference" type="text" value="<?php echo $line['Reference'];?>"/>
 							</div>
 						</div>
 					</div>
-
 					<div class="form-row row-fluid">
 						<div class="span12">
 							<div class="row-fluid">
-								<label class="form-label span3" for="normal">Numéro compte poste</label>
-								<div class="span9 controls">
-									<input class="span9" id="num_compte" name="num_compte" type="text" value="<?php echo $line['num_compte'];?>"/>
-								</div>
+								<label class="form-label span3" for="required">Note</label>
+								<input class="span9" id="note" name="note" type="text" value="<?php echo $line['Note'];?>"/>
 							</div>
 						</div>
 					</div>
@@ -211,7 +179,7 @@ disconnectDB($connect);
                                         </div-->
 										<div class="form-actions">
                                            <button type="submit" class="btn btn-info">Appliquer Changements</button>
-                                           <button type="button" class="btn" onclick="document.location='liste_utilisateurs.php';">Annuler</button>
+                                           <button type="button" class="btn" onclick="document.location='liste_bureaux.php';">Annuler</button>
                                         </div>
                                     </form>
                                  

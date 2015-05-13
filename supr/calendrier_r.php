@@ -5,7 +5,7 @@
 
                 <div class="heading">
 
-                    <h3>Data tables</h3>                    
+                    <h3>Calendrier</h3>                    
 
                     <div class="resBtnSearch">
                         <a href="#"><span class="icon16 brocco-icon-search"></span></a>
@@ -21,7 +21,7 @@
                     </div><!-- End search -->
                     
                     <ul class="breadcrumb">
-                        <li>You are here:</li>
+                        <li>Emplacement:</li>
                         <li>
                             <a href="#" class="tip" title="back to dashboard">
                                 <span class="icon16 icomoon-icon-screen"></span>
@@ -30,7 +30,7 @@
                                 <span class="icon16 icomoon-icon-arrow-right"></span>
                             </span>
                         </li>
-                        <li class="active">Data tables</li>
+                        <li class="active">Calendrier</li>
                     </ul>
 
                 </div><!-- End .heading-->
@@ -39,82 +39,43 @@
 
                     <div class="row-fluid">
 
-                        <div class="span12">
-
-                            <div class="box gradient">
+                        <div class="span8">
+                            <div class="box calendar">
 
                                 <div class="title">
+
                                     <h4>
-                                        <span>Liste Utilisateurs</span>
+                                        <span class="icon16 brocco-icon-calendar"></span>
+                                        <span>Calendrier des réservations</span>
                                     </h4>
+                                    <!-- <a href="#" class="minimize">Minimize</a> -->
                                 </div>
-                                <div class="content noPad clearfix">
-                                    <table cellpadding="0" cellspacing="0" border="0" class="responsive dynamicTable display table table-bordered" width="100%">
-                                        <thead>
-                                            <tr>
-                                                <th>id</th>
-                                                <th>nom</th>
-                                                <th>prénom</th>
-                                                <th>login</th>
-                                                <th>date naissance</th>
-												<th>mot de passe</th>
-												<th>email</th>
-												<th>type</th>
-												<th>date enregistrement</th>
-												<th>date suppression</th>
-												<th>numéro compte</th>
-												<th>Modifier</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-<?php 
-$i=0;
-$query  = "SELECT * FROM `user`";
-$connect = connectDB();
-$res = mysqli_query($connect, $query);
-while ($line = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
-	echo "<tr class='gradeA'>";
-	echo "<td>".$line['id']."</td>";
-	echo "<td>".$line['name']."</td>";
-	echo "<td>".$line['surname']."</td>";
-	echo "<td>".$line['username']."</td>";
-	echo "<td>".$line['naissance']."</td>";
-	echo "<td>".$line['password']."</td>";
-	echo "<td>".$line['email']."</td>";
-	echo "<td>".$line['id_type_user']."</td>";
-	echo "<td>".$line['date_ins']."</td>";
-	echo "<td>".$line['date_del']."</td>";
-	echo "<td>".$line['num_compte']."</td>";
-	echo "<td><a href='modification_u.php?id=".$line['id']."'><span class='brocco-icon-pencil' aria-hidden='true'></span></a></td>";
-	echo "</tr>";
-	$i++;
-}
-disconnectDB($connect);
-?>
-
-                                        </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <th>id</th>
-                                                <th>nom</th>
-                                                <th>prénom</th>
-                                                <th>login</th>
-                                                <th>date naissance</th>
-												<th>mot de passe</th>
-												<th>email</th>
-												<th>type</th>
-												<th>date enregistrement</th>
-												<th>date suppression</th>
-												<th>numéro compte</th>
-												<th>Modifier</th>
-                                            </tr>
-                                        </tfoot>
-                                    </table>
+                                <div class="content noPad"> 
+                                    <div id="calendar-events">
+                                    </div>
                                 </div>
 
-                            </div><!-- End .box -->
+                            </div><!-- End .box -->  
+                        </div><!-- End .span8 --> 
 
-                        </div><!-- End .span12 -->
+                        <div class="span4">
+
+                            <div class="page-header">
+                                <h4>Events <small>drop events to calendar</small></h4>
+                            </div>
+
+                            <div id="external-events">
+
+                                <div class="external-event">My Event 1</div>
+                                <div class="external-event">My Event 2</div>
+                                <div class="external-event">My Event 3</div>
+                                <div class="external-event">My Event 4</div>
+                                <div class="external-event">My Event 5</div>
+
+                            </div>
+
+                        </div><!-- End .span4 -->
+
 
                     </div><!-- End .row-fluid -->
                

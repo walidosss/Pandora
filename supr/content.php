@@ -20,7 +20,7 @@
                     </div><!-- End search -->
                     
                     <ul class="breadcrumb">
-                        <li>You are here:</li>
+                        <li>Emplacement:</li>
                         <li>
                             <a href="#" class="tip" title="back to dashboard">
                                 <span class="icon16 icomoon-icon-screen"></span>

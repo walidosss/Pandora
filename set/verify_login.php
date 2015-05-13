@@ -81,12 +81,14 @@ function Verify_Sess_Login($a_s_login, $type=2) {
          }
 }
 
-function Verify_User_Exist($nom, $prenom, $mail) {
+function Verify_User_Exist($nom, $prenom, $mail, $id=0) {
          $connect = connectDB();
 		 //id 	name 	surname 	username 	naissance 	password 	email 
          $select = "SELECT * FROM guichetdb.user WHERE ";
          $select .= "name = '".$nom."' AND surname = '".$prenom."' AND email = '".$mail."'";
 
+		if($id > 0) $select .= " and id<>$id";
+		
          $res = mysqli_query($connect, $select);
          if (mysqli_num_rows($res) > 0) {
              disconnectDB($connect);

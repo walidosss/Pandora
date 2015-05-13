@@ -1,7 +1,7 @@
 <?php
 
-$id_user=$_GET['id'];
-$query  = "SELECT * FROM `user` where id=$id_user";
+$id_service=$_GET['id'];
+$query  = "SELECT * FROM `service` where id_service=$id_service";
 $connect = connectDB();
 $res = mysqli_query($connect, $query);
 $line = mysqli_fetch_array($res, MYSQLI_ASSOC);
@@ -56,143 +56,38 @@ disconnectDB($connect);
 
                                     <h4>
                                         <span class="icon16 brocco-icon-grid"></span>
-                                        <span>Données Utilisateur</span>
+                                        <span>Données Service</span>
                                     </h4>
                                     
                                 </div>
                                 <div class="content">
                                    
-                                    <form class="form-horizontal" id="form-validate" method="post" action="modif_user.php" />
-				<?php 
-				if(isset($_SESSION["S_ERR_REG"]) && !empty($_SESSION["S_ERR_REG"])) { 
-					echo "<div class='alert alert-error'>";
-					echo "<button class='close' data-dismiss='alert'>×</button>";
-					echo "<strong>Attention! </strong> ".$_SESSION["S_ERR_REG"];
-                    echo "</div>";
-					unset($_SESSION["S_ERR_REG"]);
-				} 
-				if(isset($_SESSION['S_REG_INFO']) && !empty($_SESSION['S_REG_INFO'])) { 
-					echo "<div class='alert alert-info'>";
-					echo "<button type='button' class='close' data-dismiss='alert'>&times;</button>";
-					echo "<strong>Ok: </strong> ".$_SESSION['S_REG_INFO'];
-					echo "</div>";
-					unset($_SESSION['S_REG_INFO']);
-				}
-				?>
-					<div class="form-row row-fluid">
-						<div class="span12">
-							<div class="row-fluid">
-								<label class="form-label span3" for="required">ID</label>
-								<input class="span9" id="id_user" name="id_user" type="text" value="<?php echo $line['id'];?>" readonly/>
-							</div>
-						</div>
-					</div>
-					<div class="form-row row-fluid">
-						<div class="span12">
-							<div class="row-fluid">
-								<label class="form-label span3" for="required">Nom</label>
-								<input class="span9" id="nom" name="nom" type="text" value="<?php echo $line['name'];?>"/>
-							</div>
-						</div>
-					</div>
-					<div class="form-row row-fluid">
-						<div class="span12">
-							<div class="row-fluid">
-								<label class="form-label span3" for="required">Prénom</label>
-								<input class="span9" id="prenom" name="prenom" type="text" value="<?php echo $line['surname'];?>"/>
-							</div>
-						</div>
-					</div>
-					<div class="form-row row-fluid">
-						<div class="span12">
-							<div class="row-fluid">
-								<label class="form-label span3" for="required">Login</label>
-								<input class="span9" id="username" name="username" type="text" value="<?php echo $line['username'];?>"/>
-							</div>
-						</div>
-					</div>
-					<div class="form-row row-fluid">
-						<div class="span12">
-							<div class="row-fluid">
-								<label class="form-label span3" for="normal">Date de naissance</label>
-								<?php 
-								$tmp = explode('-', $line['naissance']);
-								$date_naissance = $tmp['2'].'/'.$tmp['1'].'/'.$tmp['0'];?>
-								<input class="span9 mask" id="naissance" name="naissance" type="text" value="<?php echo $date_naissance; ?>"/>
-								<span class="help-block blue span9">99/99/9999</span>
-							</div>
-						</div> 
-					</div>
-					<div class="form-row row-fluid">
-						<div class="span12">
-							<div class="row-fluid">
-								<label class="form-label span3" for="email">Email</label>
-								<input class="span9" id="email" name="email" type="text" value="<?php echo $line['email'];?>"/>
-							</div>
-						</div>
-					</div>
-					<div class="form-row row-fluid">
-						<div class="span12">
-							<div class="row-fluid">
-								<label class="form-label span3" for="normal">Mot de passe</label>
-								<div class="span9 controls">
-									<input class="span9" id="password" name="password" type="password" placeholder="Enter your password" value="<?php echo $line['password'];?>"/>
-									<input class="span9" id="passwordConfirm" name="confirm_password" type="password" placeholder="Enter your password again" value="<?php echo $line['password'];?>"/>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="form-row row-fluid">
-						<div class="span12">
-							<div class="row-fluid">
-								<label class="form-label span3" for="normal">Type utilisateur</label>
-								<div class="span9 controls">
-									<input class="span9" id="id_type_user" name="id_type_user" type="text" value="<?php echo $line['id_type_user'];?>"/>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="form-row row-fluid">
-						<div class="span12">
-							<div class="row-fluid">
-								<label class="form-label span3" for="normal">Date insertion</label>
-								<?php 
-								$tmp2 = explode(' ', $line['date_ins']);
-								$tmp = explode('-', $tmp2[0]);
-								//2015-05-10 18:16:26.000000
-								$date_insertion = $tmp['2'].'/'.$tmp['1'].'/'.$tmp['0'];?>
-								<input class="span9 mask" id="date_ins" name="date_ins" type="text" value="<?php echo $date_insertion; ?>"/>
-								<span class="help-block blue span9">99/99/9999</span>
-							</div>
-						</div>
-					</div>
-					<div class="form-row row-fluid">
-						<div class="span12">
-							<div class="row-fluid">
-								<label class="form-label span3" for="normal">Date suppression</label>
-								<?php 
-								$tmp2 = explode(' ', $line['date_del']);
-								$tmp = explode('-', $tmp2[0]);
-								//2015-05-10 18:16:26.000000
-								$date_suppression = $tmp['2'].'/'.$tmp['1'].'/'.$tmp['0'];?>
-								<input class="span9 mask" id="date_del" name="date_del" type="text" value="<?php echo $date_suppression; ?>"/>
-								<span class="help-block blue span9">99/99/9999</span>
-								
-							</div>
-						</div>
-					</div>
+                                    <form class="form-horizontal" id="form-validate" action="modif_service.php" />
 
 					<div class="form-row row-fluid">
 						<div class="span12">
 							<div class="row-fluid">
-								<label class="form-label span3" for="normal">Numéro compte poste</label>
-								<div class="span9 controls">
-									<input class="span9" id="num_compte" name="num_compte" type="text" value="<?php echo $line['num_compte'];?>"/>
-								</div>
+								<label class="form-label span3" for="required">ID Service</label>
+								<input class="span9" id="id" name="id" type="text" value="<?php echo $line['id_service'];?>" readonly/>
 							</div>
 						</div>
 					</div>
-
+					<div class="form-row row-fluid">
+						<div class="span12">
+							<div class="row-fluid">
+								<label class="form-label span3" for="required">Nom Service</label>
+								<input class="span9" id="name" name="name" type="text" value="<?php echo $line['nom_service'];?>"/>
+							</div>
+						</div>
+					</div>
+					<div class="form-row row-fluid">
+						<div class="span12">
+							<div class="row-fluid">
+								<label class="form-label span3" for="required">Couleur</label>
+								<input class="span9" id="name" name="name" type="text" value="<?php echo $line['couleur'];?>"/>
+							</div>
+						</div>
+					</div>
 
                                         <!--div class="form-row row-fluid">
                                             
@@ -211,7 +106,7 @@ disconnectDB($connect);
                                         </div-->
 										<div class="form-actions">
                                            <button type="submit" class="btn btn-info">Appliquer Changements</button>
-                                           <button type="button" class="btn" onclick="document.location='liste_utilisateurs.php';">Annuler</button>
+                                           <button type="button" class="btn" onclick="document.location='liste_services.php';">Annuler</button>
                                         </div>
                                     </form>
                                  

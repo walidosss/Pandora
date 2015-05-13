@@ -19,7 +19,7 @@ $id_user = $_POST['id_user'];
 
 if ( empty($id_user) || empty($nom) || empty($prenom) || empty($email) || empty($naissance) || empty($password) ) {
 	$_SESSION["S_ERR_REG"] = "Compiler tous les champs.<br><br>";
-	header("Location: modification_u.php?id=$id_user");
+	header("Location: profil_.php?id=$id_user");
 } else {
 	$connect = connectDB();
 	if(isset($id_user) && !empty($id_user)){
@@ -37,10 +37,10 @@ if ( empty($id_user) || empty($nom) || empty($prenom) || empty($email) || empty(
 				$_SESSION["S_ERR_REG"] = "Erreur lors de modification";
 			}
 		}
-		header("Location: modification_u.php?id=$id_user");
+		header("Location: profil_.php?id=$id_user");
 	} else {
 		$_SESSION["S_ERR_REG"] = "Utilisateur inexistant";
-		header("Location: modification_u.php");
+		header("Location: profil_.php");
 	}
 }
 ?>

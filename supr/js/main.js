@@ -623,22 +623,22 @@ $(document).ready(function() {
 			agree: "required"
 		},
 		messages: {
-			required: "Please enter a something",
+			required: "Vous devez compiler",
 			required1: {
-				required: "This field is required",
-				minlength: "This field must consist of at least 4 characters"
+				required: "Ce champ est obligatoire",
+				minlength: "Ce champ est de longueur minimum 4"
 			},
 			password: {
-				required: "Please provide a password",
-				minlength: "Your password must be at least 5 characters long"
+				required: "Veuillez introduire un mot de passe",
+				minlength: "Votre mot de passe doit etre de longueur minimum 5"
 			},
 			confirm_password: {
-				required: "Please provide a password",
-				minlength: "Your password must be at least 5 characters long",
-				equalTo: "Please enter the same password as above"
+				required: "Veuillez introduire un mot de passe",
+				minlength: "Votre mot de passe doit etre de longueur minimum 5",
+				equalTo: "Veuillez introduire le meme mot de passe"
 			},
-			email: "Please enter a valid email address",
-			agree: "Please accept our policy"
+			email: "Introduire une adresse mail valide",
+			agree: "Veuillez accepter nos conditions"
 		}	
     });
 
@@ -675,24 +675,24 @@ $(document).ready(function() {
 		},
 		messages: {
 			fname: {
-				required: "This field is required",
-				minlength: "This field must consist of at least 4 characters"
+				required: "Ce champ est obligatoire",
+				minlength: "Votre mot de passe doit etre de longueur minimum 4"
 			},
 			lname: {
-				required: "This field is required",
-				minlength: "This field must consist of at least 4 characters"
+				required: "Ce champ est obligatoire",
+				minlength: "Votre mot de passe doit etre de longueur minimum 4"
 			},
 			password1: {
-				required: "Please provide a password",
-				minlength: "Your password must be at least 5 characters long"
+				required: "Veuillez introduire un mot de passe",
+				minlength: "Votre mot de passe doit etre de longueur minimum 5"
 			},
 			confirm_password1: {
-				required: "Please provide a password",
-				minlength: "Your password must be at least 5 characters long",
-				equalTo: "Please enter the same password as above"
+				required: "Veuillez introduire un mot de passe",
+				minlength: "Votre mot de passe doit etre de longueur minimum 5",
+				equalTo: "Veuillez introduire le meme mot de passe"
 			},
-			email1: "Please enter a valid email address",
-			gender: "Choise a gender"
+			email1: "Introduire une adresse mail valide",
+			gender: "Choisir un genre"
 		}	
     });
 	

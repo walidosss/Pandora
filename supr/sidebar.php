@@ -30,22 +30,23 @@
 
                 <div class="mainnav">
                     <ul>
-                        <li><a href="charts.html"><span class="icon16 icomoon-icon-stats-up"></span>Charts</a></li>
-                        <li>
+                        <li><a href="statistiques.php"><span class="icon16 icomoon-icon-stats-up"></span>Statistiques</a></li>
+                        <!--li>
                             <a href="#"><span class="icon16 minia-icon-list-4"></span>Forms</a>
                             <ul class="sub">
                                 <li><a href="forms.html"><span class="icon16 icomoon-icon-paper"></span>Forms Stuff</a></li>
                                 <li><a href="forms-validation.html"><span class="icon16 icomoon-icon-paper"></span>Validation</a></li>
                             </ul>
-                        </li>
+                        </li-->
                         <li>
                             <a href="#"><span class="icon16 silk-icon-columns"></span>Tables</a>
                             <ul class="sub">
-                                <li><a href="tables.html"><span class="icon16 icomoon-icon-arrow-right"></span>Static</a></li>
-                                <li><a href="data-table.html"><span class="icon16 icomoon-icon-arrow-right"></span>Data table</a></li>
+                                <li><a href="liste_utilisateurs.php"><span class="icon16 icomoon-icon-arrow-right"></span>Utilisateurs</a></li>
+                                <li><a href="liste_bureaux.php"><span class="icon16 icomoon-icon-arrow-right"></span>Bureaux</a></li>
+								<li><a href="liste_services.php"><span class="icon16 icomoon-icon-arrow-right"></span>Services</a></li>
                             </ul>
                         </li>
-                        <li>
+                        <!--li>
                             <a href="#"><span class="icon16 brocco-icon-grid"></span>UI Elements</a>
                             <ul class="sub">
                                 <li><a href="icons.html"><span class="icon16 icomoon-icon-rocket"></span>Icons</a></li>
@@ -54,13 +55,13 @@
                             </ul>
                         </li>
                         <li><a href="typo.html"><span class="icon16 icomoon-icon-font"></span>Typography</a></li>
-                        <li><a href="grid.html"><span class="icon16 icomoon-icon-grid-view"></span>Grid</a></li>
-                        <li><a href="calendar.html"><span class="icon16 brocco-icon-calendar"></span>Calendar</a></li>
-                        <li>
+                        <li><a href="grid.html"><span class="icon16 icomoon-icon-grid-view"></span>Grid</a></li-->
+                        <li><a href="calendrier.php"><span class="icon16 brocco-icon-calendar"></span>Calendrier Réservations</a></li>
+                        <!--li>
                             <a href="widgets.html"><span class="icon16 icomoon-icon-cube"></span>Widgets<span class="notification green">30</span></a>
                         </li>
-                        <li><a href="file.html"><span class="icon16 icomoon-icon-upload-2"></span>File Manager</a></li>
-                        <li>
+                        <li><a href="file.html"><span class="icon16 icomoon-icon-upload-2"></span>File Manager</a></li-->
+                        <!--li>
                             <a href="#"><span class="icon16 icomoon-icon-paper"></span>Error pages<span class="notification">6</span></a>
                             <ul class="sub">
                                 <li><a href="403.html"><span class="icon16 icomoon-icon-paper"></span>Error 403</a></li>
@@ -70,21 +71,27 @@
                                 <li><a href="503.html"><span class="icon16 icomoon-icon-paper"></span>Error 503</a></li>
                                 <li><a href="offline.html"><span class="icon16 icomoon-icon-paper"></span>Offline page</a></li>
                             </ul>
-                        </li>
-                        <li>
-                            <a href="#"><span class="icon16 iconic-icon-box"></span>Other pages<span class="notification blue">4</span></a>
+                        </li-->
+                        <!--li>
+                            <a href="#"><span class="icon16 iconic-icon-box"></span>Autres pages<span class="notification blue">4</span></a>
                             <ul class="sub">
                                 <li><a href="invoice.html"><span class="icon16 icomoon-icon-paper"></span>Invoice page</a></li>
-                                <li><a href="profile.html"><span class="icon16 icomoon-icon-paper"></span>User profile</a></li>
+                                <li><a href="profile.php"><span class="icon16 icomoon-icon-paper"></span>User profile</a></li>
                                 <li><a href="search.html"><span class="icon16 wpzoom-search"></span>Search page</a></li>
                                 <li><a href="email.html"><span class="icon16 icomoon-icon-mail"></span>Email page</a></li>
+                            </ul>
+                        </li-->
+						<li>
+							<a href="#"><span class="icon16 iconic-icon-box"></span>Autres pages<span class="notification blue">1</span></a>
+							<ul class="sub">
+                                <li><a href="profil_.php"><span class="icon16 icomoon-icon-paper"></span>Profil Admin</a></li>
                             </ul>
                         </li>
                     </ul>
                 </div>
             </div><!-- End sidenav -->
 
-            <div class="sidebar-widget">
+            <!--div class="sidebar-widget">
                 <h5 class="title">Monthly Bandwidth Transfer</h5>
                 <div class="content">
                     <span class="icon16 iconic-icon-transfer left"></span>
@@ -97,7 +104,7 @@
 
             </div><!-- End .sidenav-widget -->
 
-            <div class="sidebar-widget">
+            <!--div class="sidebar-widget">
                 <h5 class="title">Disk Space Usage</h5>
                 <div class="content">
                     <span class="icon16 icomoon-icon-cloud left"></span>
@@ -110,7 +117,7 @@
 
             </div><!-- End .sidenav-widget -->
 
-            <div class="sidebar-widget">
+            <!--div class="sidebar-widget">
                 <h5 class="title">Ad sense stats</h5>
                 <div class="content">
                     
@@ -169,7 +176,7 @@
 
             </div><!-- End .sidenav-widget -->
 
-            <div class="sidebar-widget">
+            <!--div class="sidebar-widget">
                 <h5 class="title">Right now</h5>
                 <div class="content">
                     <div class="rightnow">

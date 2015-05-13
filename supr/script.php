@@ -50,7 +50,7 @@
     <script type="text/javascript" src="plugins/plupload/jquery.plupload.queue/jquery.plupload.queue.js"></script>
 
     <!-- Init plugins -->
-    <script type="text/javascript" src="js/statistic.js"></script><!-- Control graphs ( chart, pies and etc) -->
+    <!--script type="text/javascript" src="js/statistic.js"></script--><!-- Control graphs ( chart, pies and etc) -->
 
     <!-- Important Place before main.js  -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js"></script>

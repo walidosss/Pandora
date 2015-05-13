@@ -1,6 +1,7 @@
 <?php
 
-$id_user=$_GET['id'];
+$array_s_login = $_SESSION["S_LOGIN"];
+$id_user=$array_s_login['id'];
 $query  = "SELECT * FROM `user` where id=$id_user";
 $connect = connectDB();
 $res = mysqli_query($connect, $query);
@@ -14,7 +15,7 @@ disconnectDB($connect);
 
                 <div class="heading">
 
-                    <h3>Form validation</h3>                    
+                    <h3>Modification Profil Admin</h3>                    
 
                     <div class="resBtnSearch">
                         <a href="#"><span class="icon16 brocco-icon-search"></span></a>
@@ -39,7 +40,7 @@ disconnectDB($connect);
                                 <span class="icon16 icomoon-icon-arrow-right"></span>
                             </span>
                         </li>
-                        <li class="active">Form validation</li>
+                        <li class="active">Modification Profil Admin</li>
                     </ul>
 
                 </div><!-- End .heading-->
@@ -62,7 +63,7 @@ disconnectDB($connect);
                                 </div>
                                 <div class="content">
                                    
-                                    <form class="form-horizontal" id="form-validate" method="post" action="modif_user.php" />
+                                    <form class="form-horizontal" id="form-validate" method="post" action="modif_admin.php" />
 				<?php 
 				if(isset($_SESSION["S_ERR_REG"]) && !empty($_SESSION["S_ERR_REG"])) { 
 					echo "<div class='alert alert-error'>";
@@ -211,7 +212,7 @@ disconnectDB($connect);
                                         </div-->
 										<div class="form-actions">
                                            <button type="submit" class="btn btn-info">Appliquer Changements</button>
-                                           <button type="button" class="btn" onclick="document.location='liste_utilisateurs.php';">Annuler</button>
+                                           <button type="button" class="btn" onclick="document.location='profil_.php';">Annuler</button>
                                         </div>
                                     </form>
                                  

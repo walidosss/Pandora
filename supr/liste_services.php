@@ -25,7 +25,7 @@ if (isset($_SESSION["S_LOGIN"]) && !empty($_SESSION["S_LOGIN"])) {
     <div id="wrapper">
 
         <?php include_once 'sidebar.php'; ?>
-        <?php include_once 'users.php'; ?>
+        <?php include_once 'services.php'; ?>
 
         
     
