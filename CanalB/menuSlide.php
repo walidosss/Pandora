@@ -39,7 +39,7 @@
 										<dt>Pomme Dulse</dt>
 										<dd>Baked potatoes with crisped dulse</dd>
 
-										<dt><a href="http://herbivoracious.com/2011/11/crostini-with-young-pecorino-grilled-figs-and-arugula-mint-pesto-recipe.html" class="rm-viewdetails" data-thumb="images/1.jpg">Green Love Crostini</a></dt>
+										<dt><a href="http://herbivoracious.com/2011/11/crostini-with-young-pecorino-grilled-figs-and-arugula-mint-pesto-recipe.html" class="rm-viewdetails" data-thumb="images/anim/apache_mysql.png">Green Love Crostini</a></dt>
 										<dd>Crostini with young pecorino, grilled figs and arugula &amp; mint pesto</dd>
 										
 										<dt>Focaccia di Carciofi</dt>
