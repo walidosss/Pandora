@@ -267,6 +267,7 @@ a.rm-viewdetails:before{
 	width: 400px;
 	height: 400px;
 	max-width : 100%;
+	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center center;
 	float: left;
