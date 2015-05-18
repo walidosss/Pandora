@@ -73,7 +73,7 @@
 				</ul><!-- end of slider nav -->
 			</div>
 	</div><!-- end of slider-wrap -->
-	
+	<?php require 'menuSlide.php';?>
 	<div id="container">
 			
 			<section class="slogan">

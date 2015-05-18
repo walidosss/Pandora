@@ -30,6 +30,7 @@
 			<link rel='stylesheet' href='fc/lib/cupertino/jquery-ui.min.css' />
 			<link href='fc/fullcalendar.css' rel='stylesheet' />
 			<link href='fc/fullcalendar.print.css' rel='stylesheet' media='print' />
+			<link rel="stylesheet" type="text/css" href="css/style.css" />
 			
 			<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 			<!--[if lt IE 9]>
@@ -57,6 +58,7 @@
 			<script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 			<script src="js/bootstrap-datetimepicker.min.js"></script>
 			<script src="js/jquery.maskedinput.min.js" type="text/javascript"></script>
+			
 			<script src="js/myScript.js" type="text/javascript"></script>
 			
 			<!--script src="https://maps.googleapis.com/maps/api/js"></script-->
