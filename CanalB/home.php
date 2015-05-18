@@ -23,7 +23,9 @@
 						<a href="#" title=""  class="img-hover" ><img src="images/anim/animation8.png" alt="Slider Image"></a>
 					</i-->
 <br>
+<div id="sliderMenu">
 	<?php require 'menuSlide.php';?>
+</div>
 	<div id="container">
 			
 			<section class="slogan">
