@@ -264,8 +264,9 @@ a.rm-viewdetails:before{
 }
 
 .rm-modal .rm-thumb {
-	width: 100px;
-	height: 100px;
+	width: 400px;
+	height: 400px;
+	max-width : 100%;
 	background-repeat: no-repeat;
 	background-position: center center;
 	float: left;
