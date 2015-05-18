@@ -265,18 +265,21 @@ a.rm-viewdetails:before{
 
 .rm-modal .rm-thumb {
 	width: 400px;
-	height: 400px;
 	max-width : 100%;
+	/*height: 400px;
+	
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: center center;*/
 	float: left;
 	margin: 0 20px 0 0;
 	box-shadow: 
 		inset 1px 1px 3px rgba(0,0,0,0.2), 
 		1px 1px 1px rgba(255,255,255,0.9);
 }
-
+.rm-modal .rm-thumb >img{
+	max-width: 100%;
+}
 .rm-modal a:after,
 .rm-button-open:after {
 	content: '\2192';
