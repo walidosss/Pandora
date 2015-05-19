@@ -1,15 +1,15 @@
 
 function initialize() {
 
-  var latLngArezzo = new google.maps.LatLng(36.8, 10.2);
+  var latLngTunis = new google.maps.LatLng(36.8, 10.2);
   var opzioni = {
-          center: latLngArezzo,
+          center: latLngTunis,
           zoom: 10,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
 
   var map=new google.maps.Map(document.getElementById('map'), opzioni);
-  var marker = new google.maps.Marker({position: latLngArezzo, map: map, title: 'Tunis' });
+  var marker = new google.maps.Marker({position: latLngTunis, map: map, title: 'Tunis' });
   var image = 'images/marker_small_verde.png';
 
   var image = {

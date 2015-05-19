@@ -89,7 +89,7 @@ function Verify_User_Exist($nom, $prenom, $mail, $id=0) {
          $connect = connectDB();
 		 //id 	name 	surname 	login 	naissance 	mot_de_passe 	email 
          $select = "SELECT * FROM guichetdb.utilisateur WHERE ";
-         $select .= "nom = '".$nom."' AND login = '".$prenom."' AND email = '".$mail."'";
+         $select .= "nom = '".$nom."' AND prenom = '".$prenom."' AND email = '".$mail."'";
 
 		if($id > 0) $select .= " and id<>$id";
 		

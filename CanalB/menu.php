@@ -54,11 +54,11 @@
 				</div>
 				
 				<!-- GLOBAL SEARCH -->
-				<form method="get" action="#" id="topsearch">
+				<!--form method="get" action="#" id="topsearch">
 						<p>
 							<input type="text" placeholder="Recherche" name="s" id="tsearch">
 							<input type="submit" id="topsubmit" value="">
 						</p>
-				</form>
+				</form-->
 		</nav>
 </header><!-- ending of header of the website -->

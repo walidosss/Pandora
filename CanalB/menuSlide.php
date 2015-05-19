@@ -10,7 +10,7 @@
 								<div class="rm-content">
 
 									<div class="rm-logo"></div>
-									<h2>Gourmet Castle</h2>
+									<h2>Guide CanalBleu</h2>
 									<h3>Fine Dining &amp; Gourmet Takeaway</h3>
 
 									<a href="#" class="rm-button-open">View the Menu</a>
@@ -39,7 +39,7 @@
 										<dt>Pomme Dulse</dt>
 										<dd>Baked potatoes with crisped dulse</dd>
 
-										<dt><a href="http://herbivoracious.com/2011/11/crostini-with-young-pecorino-grilled-figs-and-arugula-mint-pesto-recipe.html" class="rm-viewdetails" data-thumb="images/anim/apache_mysql.png">Green Love Crostini</a></dt>
+										<dt><a href="#" class="rm-viewdetails" data-thumb="images/anim/animation1.png">Green Love Crostini</a></dt>
 										<dd>Crostini with young pecorino, grilled figs and arugula &amp; mint pesto</dd>
 										
 										<dt>Focaccia di Carciofi</dt>
@@ -51,7 +51,7 @@
 										<dt>Green Delight</dt>
 										<dd>Watercress, frisee and avocado salad</dd>
 
-										<dt><a href="http://herbivoracious.com/2010/02/thai-tofu-salad-recipe.html" class="rm-viewdetails" data-thumb="images/13.jpg">Gourmet Yam Taohu</a></dt>
+										<dt><a href="#" class="rm-viewdetails" data-thumb="images/anim/animation2.png">Gourmet Yam Taohu</a></dt>
 										<dd>Thai tofu salad yam taohu</dd>
 
 										<dt>Panini Deluxe</dt>
