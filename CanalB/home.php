@@ -28,7 +28,7 @@
 </div>
 	<div id="container">
 			
-			<section class="slogan">
+			<!--section class="slogan">
 			<?php 
 			$nom = "";//var_dump($_SESSION);
 			if (isset($_SESSION['S_LOGIN'] ["nom"]) && !empty($_SESSION['S_LOGIN'] ["nom"])) { 
@@ -37,9 +37,10 @@
 			?>
 				<h2>Bienvenu <?php echo $nom;?> sur notre nouvelle application, <i>canal bleu</i></h2>
 				<h3>Réservez votre place comme vous voulez pour éviter la file d'attente pour vous renseigner vous pouvez consulter l'animation</h3>
-			</section>
+			</section-->
 			
-			<ul class="services">                                        
+			<ul class="services">  
+
 				  <li class="service">
 					  <figure class="service-thumb"><a href="index.php?page=calendrier"><img src="images/Refined/small/serv1.png" alt="Réservation"></a></figure>
 					  <h4><a href="index.php?page=calendrier">Réservation</a></h4>

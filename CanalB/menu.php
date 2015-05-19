@@ -6,20 +6,8 @@
 		<div id="logo-container">
 			<a href="index.php" class="logo"  title="Canal Bleu">
 				<img src="images/logo.png" alt="Canal Bleu">
-				<!--span class="tagline">Just another HTML Template</span-->
 			</a>
 		</div>
-									 
-		<!--ul class="social-nav">                                        
-			<li class="facebook"><a target="_blank" href="#"></a></li>
-			<li class="twitter"><a target="_blank" href="#"></a></li>
-			<li class="skype"><a target="_blank" href="#"></a></li>																	
-			<li class="flickr"><a target="_blank" href="#"></a></li>																	
-			<li class="google"><a target="_blank" href="#"></a></li>																
-			<li class="linkedin"><a target="_blank" href="#"></a></li>															
-			<li class="rss"><a target="_blank" href="#"></a></li>
-			<li class="phone"><span>1.800.123.4567</span></li>
-		</ul-->
 
 	
 		<nav class="main-nav clearfix">
@@ -53,12 +41,5 @@
 					</ul>
 				</div>
 				
-				<!-- GLOBAL SEARCH -->
-				<!--form method="get" action="#" id="topsearch">
-						<p>
-							<input type="text" placeholder="Recherche" name="s" id="tsearch">
-							<input type="submit" id="topsubmit" value="">
-						</p>
-				</form-->
 		</nav>
 </header><!-- ending of header of the website -->

@@ -55,7 +55,7 @@ var Menu = (function() {
 				description = recipe.parent().next().text(),
 				url = recipe.attr( 'href' );
 
-			var $modal = $( '<div class="rm-modal"><div class="rm-thumb" ><img src="'+img+'"></div><h5>' + title + '</h5><p>' + description + '</p><a href="' + url + '">See the recipe</a><span class="rm-close-modal">x</span></div>' );
+			var $modal = $( '<div class="rm-modal"><div class="rm-thumb" ><img src="'+img+'"></div><h5>' + title + '</h5><p>' + description + '</p><a href="' + url + '">Aller vers le lien</a><span class="rm-close-modal">x</span></div>' );
 
 			$modal.appendTo( $container );
 

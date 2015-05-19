@@ -82,7 +82,7 @@
 					  <label class="display-ie8" for="login">Login</label>
 					  <input type="text" name="login" id="login" class="email required" placeholder="Login" title="Veuillez saisir votre login"  >
 					  <label class="display-ie8" for="password">Password</label>
-					  <input type="password" name="password" id="password" class="password required" placeholder="Password" title="Veuillez saisir votre mot de passe"  >
+					  <input type="password" name="password" id="password" class="password required" placeholder="Mot de passe" title="Veuillez saisir votre mot de passe"  >
 					  <input type="submit" id="nl_submit" value="Login" class="readmore">
 				  </p>
 				  <div class="error-container" id="div_erreur">
